@@ -1,0 +1,146 @@
+﻿Sophos Security Lab - M1.1 Hyper-V Readiness Check
+Timestamp: 2026-06-01 13:02:10
+ComputerName: LAB-HOST
+UserName: lab-user
+
+===== Operating System =====
+
+Caption                  Version    BuildNumber OSArchitecture
+-------                  -------    ----------- --------------
+Microsoft Windows 11 Pro 10.0.26200 26200       64-Bit        
+
+
+
+
+===== Computer and RAM =====
+
+Manufacturer Model             HypervisorPresent
+------------ -----             -----------------
+Acer         Predator PHN16-72              True
+
+
+
+Total RAM GB: 31.71
+
+===== Hyper-V Windows Optional Feature =====
+
+FeatureName             State RestartNeeded
+-----------             ----- -------------
+Microsoft-Hyper-V-All Enabled         False
+
+
+
+
+===== Hyper-V Service vmms =====
+
+Name  Status StartType DisplayName                              
+----  ------ --------- -----------                              
+vmms Running Automatic Hyper-V-Verwaltung für virtuelle Computer
+
+
+
+
+===== Hyper-V PowerShell Module =====
+
+Name    Version ModuleBase                                                        
+----    ------- ----------                                                        
+Hyper-V 2.0.0.0 C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\Hyper-V\2.0.0.0
+
+
+
+
+===== Existing Hyper-V Switches =====
+
+Name           SwitchType AllowManagementOS NetAdapterInterfaceDescription                                     
+----           ---------- ----------------- ------------------------------                                     
+WSL-External     External              True Killer(R) Wi-Fi 6E AX1675i 160MHz Wireless Network Adapter (211NGW)
+VULN-SCAN        Internal              True                                                                    
+VULN-NAT         Internal              True                                                                    
+Default Switch   Internal              True                                                                    
+
+
+
+
+===== Existing Windows NAT Configurations =====
+
+Name                InternalIPInterfaceAddressPrefix Active
+----                -------------------------------- ------
+VULN-NAT-192-168-66 192.168.66.0/24                    True
+
+
+
+
+===== Existing Hyper-V Virtual Machines =====
+No Hyper-V VMs found.
+
+===== vEthernet Network Adapters =====
+
+
+Name                 : vEthernet (WSL-External)
+Status               : Up
+MacAddress           : XX-XX-XX-XX-XX-XX
+LinkSpeed            : 1.2 Gbps
+InterfaceDescription : Hyper-V Virtual Ethernet Adapter #2
+
+Name                 : vEthernet (VULN-SCAN)
+Status               : Up
+MacAddress           : XX-XX-XX-XX-XX-XX
+LinkSpeed            : 10 Gbps
+InterfaceDescription : Hyper-V Virtual Ethernet Adapter #4
+
+Name                 : vEthernet (VULN-NAT)
+Status               : Up
+MacAddress           : XX-XX-XX-XX-XX-XX
+LinkSpeed            : 10 Gbps
+InterfaceDescription : Hyper-V Virtual Ethernet Adapter #3
+
+Name                 : vEthernet (Default Switch)
+Status               : Up
+MacAddress           : XX-XX-XX-XX-XX-XX
+LinkSpeed            : 10 Gbps
+InterfaceDescription : Hyper-V Virtual Ethernet Adapter
+
+
+
+
+
+===== IP Addresses on vEthernet Adapters =====
+Adapter: vEthernet (WSL-External)
+
+IPAddress                             PrefixLength AddressFamily
+---------                             ------------ -------------
+fe80::a50d:8716:87a5:1f06%18                    64          IPv6
+REDACTED_PUBLIC_IPV6          128          IPv6
+REDACTED_PUBLIC_IPV6           64          IPv6
+REDACTED_HOME_LAN_IP                                   24          IPv4
+
+
+
+Adapter: vEthernet (VULN-SCAN)
+
+IPAddress                    PrefixLength AddressFamily
+---------                    ------------ -------------
+fe80::90af:fb82:7ca8:387d%13           64          IPv6
+192.168.67.1                           24          IPv4
+
+
+
+Adapter: vEthernet (VULN-NAT)
+
+IPAddress                   PrefixLength AddressFamily
+---------                   ------------ -------------
+fe80::33d5:e2f1:1958:cf7b%9           64          IPv6
+192.168.66.1                          24          IPv4
+
+
+
+Adapter: vEthernet (Default Switch)
+
+IPAddress                    PrefixLength AddressFamily
+---------                    ------------ -------------
+fe80::accc:a7cd:66d2:44cd%56           64          IPv6
+172.26.176.1                           20          IPv4
+
+
+
+

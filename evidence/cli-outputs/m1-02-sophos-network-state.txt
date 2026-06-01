@@ -1,0 +1,90 @@
+﻿Sophos Security Lab - M1.3 Network State Evidence
+Timestamp: 2026-06-01 13:07:23
+ComputerName: LAB-HOST
+UserName: lab-user
+
+===== Expected Sophos Lab Network Design =====
+WAN switch: vSwitch-sophos-wan-nat
+WAN host IP: 172.30.10.1/24
+WAN NAT prefix: 172.30.10.0/24
+LAN switch: vSwitch-sophos-lan
+LAN host management IP: 10.10.10.254/24
+Future Sophos WAN IP: 172.30.10.2/24
+Future Sophos LAN IP: 10.10.10.1/24
+
+===== Sophos Hyper-V Switches =====
+
+Name                   SwitchType AllowManagementOS NetAdapterInterfaceDescription
+----                   ---------- ----------------- ------------------------------
+vSwitch-sophos-wan-nat   Internal              True                               
+vSwitch-sophos-lan       Internal              True                               
+
+
+
+
+===== Sophos vEthernet Adapters =====
+
+Name                               Status MacAddress        LinkSpeed InterfaceDescription               
+----                               ------ ----------        --------- --------------------               
+vEthernet (vSwitch-sophos-wan-nat) Up     XX-XX-XX-XX-XX-XX 10 Gbps   Hyper-V Virtual Ethernet Adapter #5
+vEthernet (vSwitch-sophos-lan)     Up     XX-XX-XX-XX-XX-XX 10 Gbps   Hyper-V Virtual Ethernet Adapter #6
+
+
+
+
+===== Sophos vEthernet IPv4 Addresses =====
+
+InterfaceAlias                     IPAddress    PrefixLength AddressState
+--------------                     ---------    ------------ ------------
+vEthernet (vSwitch-sophos-lan)     10.10.10.254           24    Preferred
+vEthernet (vSwitch-sophos-wan-nat) 172.30.10.1            24    Preferred
+
+
+
+
+===== Sophos WinNAT =====
+
+Name               InternalIPInterfaceAddressPrefix Active
+----               -------------------------------- ------
+nat-sophos-wan-lab 172.30.10.0/24                     True
+
+
+
+
+===== Existing Lab-Relevant NAT Entries =====
+
+Name                InternalIPInterfaceAddressPrefix Active
+----                -------------------------------- ------
+nat-sophos-wan-lab  172.30.10.0/24                     True
+VULN-NAT-192-168-66 192.168.66.0/24                    True
+
+
+
+
+===== Local Interface Reachability Tests =====
+
+
+ComputerName   : 172.30.10.1
+RemoteAddress  : 172.30.10.1
+InterfaceAlias : vEthernet (vSwitch-sophos-wan-nat)
+SourceAddress  : 172.30.10.1
+PingSucceeded  : True
+
+
+
+
+
+
+ComputerName   : 10.10.10.254
+RemoteAddress  : 10.10.10.254
+InterfaceAlias : vEthernet (vSwitch-sophos-lan)
+SourceAddress  : 10.10.10.254
+PingSucceeded  : True
+
+
+
+
+
+===== Git Status =====
+?? evidence/
+
