@@ -1,0 +1,31 @@
+﻿Sophos Security Lab - M2.2 Sophos VHD Preparation
+Timestamp: 2026-06-01 13:54:19
+
+Selected ZIP:
+VI-22.0.0_GA.HYV-411.zip
+
+ZIP size MB:
+834,88
+
+ZIP SHA256:
+39F1E609B84121F574F20AD8C3E7A7A8C2D5872A2D95A26A01722EE6C229FAC1
+
+Extraction folder:
+.local\vhd\sophos-firewall\VI-22.0.0_GA.HYV-411
+
+Primary disk:
+PRIMARY-DISK.vhd
+
+Auxiliary disk:
+AUXILIARY-DISK.vhd
+
+Extracted VHD files:
+PRIMARY-DISK.vhd size GB: 0.91
+AUXILIARY-DISK.vhd size GB: 0.11
+
+Result:
+Sophos Hyper-V VHD files were found successfully.
+
+Git status:
+?? docs/operations/m2-sophos-download-notes.md
+

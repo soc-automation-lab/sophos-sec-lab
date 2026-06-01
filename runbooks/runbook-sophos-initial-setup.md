@@ -1,22 +1,45 @@
-# Runbook - Sophos Initial Setup
+﻿# Runbook: Sophos Initial Setup
 
-## Ziel
+## Purpose
 
-Erstkonfiguration der Sophos Firewall Home Edition im lokalen Hyper-V-Lab.
+This runbook documents the initial Sophos Firewall setup path for the local Hyper-V lab.
 
-## Schritte
+## Initial Access
 
-1. Hyper-V-Switches prüfen.
-2. Sophos VM starten.
-3. LAN-IP erreichen: `https://10.10.10.1:4444` oder initial laut Konsole.
-4. EULA akzeptieren.
-5. Home-Edition-Registrierung durchführen.
-6. WAN als DHCP oder statisch im WAN-NAT-Netz konfigurieren.
-7. LAN als Gateway/DHCP für Testclients konfigurieren.
-8. Basis-Firewallregel LAN -> WAN erstellen.
-9. NAT/Masquerading aktivieren.
-10. Logs prüfen.
+| Item | Value |
+|---|---|
+| Initial setup URL | https://172.16.16.16:4444 |
+| Temporary host IP used | 172.16.16.254/24 on vSwitch-sophos-lan |
+| Final WebAdmin URL | https://10.10.10.1:4444 |
 
-## Sicherheitsnotiz
+## Setup Order
 
-Keine Passwörter, Seriennummern oder Lizenzdaten ins Repository schreiben.
+1. Start the Sophos VM.
+2. Add temporary host IP 172.16.16.254/24 to the LAN vEthernet adapter.
+3. Open https://172.16.16.16:4444.
+4. Accept the self-signed certificate warning in the browser.
+5. Accept the end-user license terms.
+6. Configure WAN on PortB with static IP 172.30.10.2/24, gateway 172.30.10.1 and public DNS resolvers.
+7. Configure hostname and time zone.
+8. Register or activate the Home Use license without documenting the serial number.
+9. Configure LAN on PortA as 10.10.10.1/24.
+10. Keep DHCP enabled for lab clients.
+11. Leave optional security profiles disabled during the first baseline setup.
+12. Skip Sophos Central Cloud Management for the local lab baseline.
+13. Finish the wizard and wait for firmware/configuration tasks to complete.
+14. Open the final WebAdmin URL https://10.10.10.1:4444.
+15. Remove the temporary host IP 172.16.16.254 from the LAN vEthernet adapter.
+
+## Important Network Mapping
+
+| Sophos Port | Hyper-V Adapter | Switch | Role |
+|---|---|---|---|
+| PortA | Port1-LAN | vSwitch-sophos-lan | LAN gateway |
+| PortB | Port2-WAN | vSwitch-sophos-wan-nat | WAN uplink |
+
+## Troubleshooting Notes
+
+- If 10.10.10.1:4444 is not reachable immediately after setup, wait several minutes because Sophos may still be applying firmware and service changes.
+- ICMP ping may fail even when WebAdmin over TCP/4444 works.
+- If the browser still points to 172.16.16.16 after the LAN change, manually open https://10.10.10.1:4444.
+- Do not store passwords, serial numbers or registration screenshots in the repository.
