@@ -1,0 +1,26 @@
+﻿# Normalize line endings for repository consistency
+* text=auto
+
+# Documentation should stay LF for GitHub readability
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# PowerShell scripts should use Windows-friendly CRLF
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+*.psd1 text eol=crlf
+
+# Binary / large VM artifacts
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.docx binary
+*.zip binary
+*.iso binary
+*.vhd binary
+*.vhdx binary
