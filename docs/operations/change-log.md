@@ -65,3 +65,37 @@ Do not remove unrelated switches such as Default Switch, WSL-External, VULN-NAT 
 
 If rollback is required, shut down vm-sophos-fw-01 and remove only this VM and its local .local/hyperv working directory.
 Do not remove the Sophos lab switches or WinNAT unless rolling back Meilenstein 1 as well.
+
+## CHG-M3-WINDOWS-CLIENT-LAN-INTERNET
+
+| Field | Value |
+|---|---|
+| Change type | Client connectivity validation |
+| Scope | Windows test client VM, DHCP, DNS, HTTPS, Sophos firewall logging |
+| Risk | Low to Medium |
+| Result | Successful |
+
+## Implemented Changes
+
+- Created vm-win-client-01 as a Generation 2 Windows 11 test client VM.
+- Connected the VM to vSwitch-sophos-lan.
+- Installed Windows 11 Enterprise Evaluation.
+- Verified DHCP from Sophos Firewall.
+- Verified client default gateway and DNS via Sophos.
+- Verified HTTPS internet connectivity through Sophos and Windows WinNAT.
+- Enabled firewall traffic logging on #Default_Network_Policy.
+- Verified a Sophos firewall log entry for client HTTPS traffic.
+
+## Validation
+
+- Client IP address: 10.10.10.100/24.
+- Default gateway: 10.10.10.1.
+- DNS server: 10.10.10.1.
+- HTTPS to example.com TCP/443 succeeded.
+- Sophos firewall log showed allowed TCP/443 traffic from 10.10.10.100 to 104.20.23.154.
+- Traffic matched #Default_Network_Policy and #NAT_Default_Network_Policy.
+
+## Rollback Concept
+
+If rollback is required, shut down and remove only vm-win-client-01 and its local .local/hyperv working directory.
+Do not remove Sophos Firewall VM, Sophos switches or WinNAT unless rolling back earlier milestones.

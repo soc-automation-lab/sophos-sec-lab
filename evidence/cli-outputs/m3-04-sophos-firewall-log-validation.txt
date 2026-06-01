@@ -1,0 +1,36 @@
+﻿Sophos Security Lab - M3.6 Sophos Firewall Log Validation
+Timestamp: 2026-06-01 20:38:50
+
+===== Log Validation Context =====
+Traffic was generated from vm-win-client-01 through Sophos Firewall to example.com over HTTPS.
+The Sophos Firewall log viewer was used with a filter for source IP 10.10.10.100.
+
+===== Verified Firewall Log Entry =====
+Log type: Firewall rule
+Action: Allowed
+Source IP: 10.10.10.100
+Destination IP: 104.20.23.154
+Source port: 63699
+Destination port: 443
+Protocol: TCP
+Firewall rule ID: 2
+Firewall rule name: #Default_Network_Policy
+NAT rule ID: 3
+NAT rule name: #NAT_Default_Network_Policy
+Incoming interface: PortA
+Outgoing interface: PortB
+
+===== Interpretation =====
+The Windows test client traffic was allowed by the default LAN-to-WAN firewall policy.
+The traffic entered Sophos on the LAN interface PortA and left Sophos through the WAN interface PortB.
+The linked NAT rule was applied, confirming that Sophos performed source NAT/masquerading for the client.
+
+===== Security Note =====
+No screenshot was committed because the browser URL may contain CSRF/session parameters.
+No Sophos serial number, email address, password or token is stored in this evidence file.
+
+===== Git Status =====
+?? evidence/cli-outputs/m3-01-win-client-preflight.txt
+?? evidence/cli-outputs/m3-02-win-client-vm-created.txt
+?? evidence/cli-outputs/m3-03-win-client-connectivity-verification.txt
+

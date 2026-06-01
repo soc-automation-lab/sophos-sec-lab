@@ -1,0 +1,35 @@
+﻿Sophos Security Lab - M3.4 Windows Client Connectivity Verification
+Timestamp: 2026-06-01 17:49:42
+
+===== Test Context =====
+Test system: vm-win-client-01
+Network: vSwitch-sophos-lan
+Firewall gateway: 10.10.10.1
+Client addressing method: DHCP from Sophos Firewall
+
+===== Verified Client IP Configuration =====
+IPv4 address: 10.10.10.100/24
+Default gateway: 10.10.10.1
+DHCP server: 10.10.10.1
+DNS server: 10.10.10.1
+
+===== Verified Routes =====
+Default route: 0.0.0.0/0 via 10.10.10.1
+Client source address: 10.10.10.100
+
+===== Verified Connectivity Tests =====
+Gateway reachability 10.10.10.1: PingSucceeded True
+Sophos WebAdmin 10.10.10.1 TCP/4444: TcpTestSucceeded True
+DNS resolution for example.com: Successful
+HTTPS connectivity to example.com TCP/443: TcpTestSucceeded True
+
+===== Confirmed Traffic Path =====
+vm-win-client-01 -> Sophos LAN 10.10.10.1 -> Sophos firewall policy/NAT -> Sophos WAN 172.30.10.2 -> Windows WinNAT 172.30.10.1 -> Internet
+
+===== Security Note =====
+Hostname, MAC address, DHCP DUID, passwords and personal account data were not stored in this evidence file.
+
+===== Git Status =====
+?? evidence/cli-outputs/m3-01-win-client-preflight.txt
+?? evidence/cli-outputs/m3-02-win-client-vm-created.txt
+
