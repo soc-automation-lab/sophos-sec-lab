@@ -1,0 +1,33 @@
+﻿# Operating system / editor artifacts
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Local/private lab data
+.local/
+evidence/local-private/
+
+# Large VM and installer artifacts
+*.iso
+*.zip
+*.7z
+*.vhd
+*.vhdx
+*.avhd
+*.avhdx
+
+# Secrets / credentials / licenses
+*.key
+*.pem
+*.pfx
+*.cer
+*.crt
+*.lic
+*password*
+*secret*
+*token*
+*license*
+
+# PowerShell local output
+*.transcript.txt
