@@ -137,3 +137,38 @@ The rule was then disabled and the tests were repeated.
 
 If approved troubleshooting requires temporary broad LAN-to-WAN access, #Default_Network_Policy can be re-enabled.
 The rule was intentionally disabled instead of deleted.
+
+## CHG-M5-NETWORK-SECURITY-CONCEPTS
+
+| Field | Value |
+|---|---|
+| Change type | Network and security architecture documentation |
+| Scope | VLAN, switch integration, segmentation, VPN fundamentals, Microsoft 365 security concepts |
+| Risk | Low |
+| Result | Successful |
+
+## Implemented Documentation
+
+- Added VLAN and switch integration concept documentation.
+- Added enterprise segmentation concept documentation.
+- Added VPN fundamentals concept documentation.
+- Added Microsoft 365 security concept documentation.
+- Added evidence files for the created M5 documentation artifacts.
+
+## Technical Focus
+
+- VLANs, access ports, trunk ports and firewall uplinks.
+- Firewall-centric segmentation with zones and traffic matrices.
+- Remote-access VPN and site-to-site VPN design notes.
+- Microsoft 365 security concepts such as MFA, Conditional Access, mail security, logging and identity-aware access.
+
+## Validation
+
+- Documentation files were created under docs/architecture, docs/network and docs/cloud-security.
+- Evidence files were created under evidence/cli-outputs.
+- Repository wording was checked for configured public-context terms before commit.
+
+## Rollback Concept
+
+If the concept documentation needs to be revised, update or remove only the M5 documentation files.
+No firewall runtime configuration was changed during M5.

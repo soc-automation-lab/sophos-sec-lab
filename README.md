@@ -74,3 +74,12 @@ evidence/   Sanitized command output and lab evidence
 .local/     Local installers, ISOs and VHDs excluded from Git
 
 
+
+## Additional Concept Documentation
+
+| Area | Document |
+|---|---|
+| VLAN and switch integration | docs/network/vlan-and-switch-integration-concept.md |
+| Enterprise segmentation | docs/architecture/enterprise-segmentation-concept.md |
+| VPN fundamentals | docs/network/vpn-fundamentals-concept.md |
+| Microsoft 365 security concepts | docs/cloud-security/microsoft-365-security-concept.md |

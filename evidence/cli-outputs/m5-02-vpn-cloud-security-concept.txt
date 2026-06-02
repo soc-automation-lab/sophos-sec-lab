@@ -1,0 +1,17 @@
+﻿Sophos Security Lab - M5.2 VPN and Cloud-Security Concept
+Timestamp: 2026-06-02 22:55:19
+
+===== Created Documents =====
+docs/network/vpn-fundamentals-concept.md
+docs/cloud-security/microsoft-365-security-concept.md
+
+===== Purpose =====
+The documents add neutral conceptual coverage for VPN fundamentals and Microsoft 365 security concepts.
+They complement the implemented Sophos firewall and rulebase work with additional security operations context.
+
+===== Git Status =====
+?? docs/architecture/enterprise-segmentation-concept.md
+?? docs/cloud-security/
+?? docs/network/
+?? evidence/cli-outputs/m5-01-vlan-switch-concept.txt
+

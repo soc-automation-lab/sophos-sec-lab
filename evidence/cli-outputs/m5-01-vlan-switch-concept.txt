@@ -1,0 +1,15 @@
+﻿Sophos Security Lab - M5.1 VLAN and Switch Integration Concept
+Timestamp: 2026-06-02 22:53:39
+
+===== Created Documents =====
+docs/network/vlan-and-switch-integration-concept.md
+docs/architecture/enterprise-segmentation-concept.md
+
+===== Purpose =====
+The documents map the current Hyper-V-based Sophos lab to a larger VLAN and switch-based network design.
+They explain access ports, trunk ports, VLAN segmentation, firewall zones, traffic matrices and default-deny principles.
+
+===== Git Status =====
+?? docs/architecture/enterprise-segmentation-concept.md
+?? docs/network/
+
