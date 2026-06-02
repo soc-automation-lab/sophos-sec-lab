@@ -1,0 +1,24 @@
+﻿Sophos Security Lab - M6.2 Public Safety Check
+
+Git status before safety check:
+?? docs/architecture/architecture-overview.md
+?? docs/operations/public-release-checklist.md
+?? evidence/cli-outputs/m6-01-public-release-prep-docs.txt
+?? evidence/cli-outputs/m6-02-public-safety-check.txt
+
+Tracked file count: 49
+Risky tracked file count: 0
+Email-like match count: 0
+Session/token indicator count: 0
+Sophos serial-like match count: 0
+Large tracked file count over 1 MB: 0
+
+Interpretation:
+Risky tracked files, email-like strings, session/token indicators, Sophos serial-like indicators and large tracked files should be zero before public release.
+The Sophos serial-like check uses a case-sensitive pattern requiring V followed by a digit to avoid false positives such as verification or validation.
+
+Git status after safety check:
+?? docs/architecture/architecture-overview.md
+?? docs/operations/public-release-checklist.md
+?? evidence/cli-outputs/m6-01-public-release-prep-docs.txt
+?? evidence/cli-outputs/m6-02-public-safety-check.txt

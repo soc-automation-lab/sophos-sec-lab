@@ -1,0 +1,14 @@
+﻿Sophos Security Lab - M6.1 Public Release Preparation Documentation
+
+Created or updated documents:
+- docs/architecture/architecture-overview.md
+- docs/operations/public-release-checklist.md
+
+Purpose:
+The architecture overview summarizes the implemented Sophos traffic path, interfaces, rulebase, NAT state and validation results.
+The public release checklist documents repository safety checks before pushing to a public Git hosting platform.
+
+Git status at evidence creation:
+?? docs/architecture/architecture-overview.md
+?? docs/operations/public-release-checklist.md
+?? evidence/cli-outputs/m6-01-public-release-prep-docs.txt
