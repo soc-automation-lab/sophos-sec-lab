@@ -1,0 +1,76 @@
+﻿Sophos Security Lab - M4.5 Rulebase Allow/Block Validation
+Timestamp: 2026-06-02 21:23:46
+
+===== Implemented Rulebase Change =====
+A specific LAN-to-WAN web rule was created above the broad default LAN-to-WAN policy.
+The broad #Default_Network_Policy was then disabled, not deleted, to keep rollback simple.
+
+Active web firewall rule: LAN_to_WAN_Web
+Source zone: LAN
+Destination zone: WAN
+Services: HTTP, HTTPS
+Action: Allow
+Logging: Enabled
+NAT rule: NAT_LAN_to_WAN_Web
+Incoming interface: PortA
+Outgoing interface: PortB
+
+Disabled broad rule: #Default_Network_Policy
+Previous scope: LAN to WAN, any service
+Reason for disabling: Replace broad any-service egress with a more specific web allow rule.
+
+===== Client-Side Validation After Disabling Broad Rule =====
+Test system: vm-win-client-01
+Client IP: 10.10.10.100
+Default gateway: 10.10.10.1
+
+HTTPS test to example.com:
+Result: Successful
+HTTP status: 200 OK
+TCP/443: TcpTestSucceeded True
+
+Non-web TCP/22 test to 1.1.1.1:
+Result: Not successful
+TCP/22: TcpTestSucceeded False
+Ping to 1.1.1.1: PingSucceeded False
+
+DNS sanity check:
+Result: Successful
+example.com resolved to IPv4 and IPv6 addresses.
+
+===== Sophos Log Validation =====
+Allowed HTTPS traffic was visible in Sophos Firewall logs.
+Matched firewall rule: LAN_to_WAN_Web
+Matched NAT rule: NAT_LAN_to_WAN_Web
+Source IP: 10.10.10.100
+Destination port: 443
+Protocol: TCP
+Action: Allowed
+
+===== Correction Note =====
+Before disabling #Default_Network_Policy, a TCP/22 test to 1.1.1.1 was still shown as allowed by #Default_Network_Policy in Sophos logs.
+This confirmed that the broad rule was still active at that time.
+After disabling #Default_Network_Policy, the TCP/22 test was no longer successful from the client perspective.
+
+===== Interpretation =====
+The rulebase now follows a more specific allow-list approach for web traffic.
+HTTP and HTTPS are handled by a dedicated logged rule.
+The broad any-service LAN-to-WAN fallback rule is disabled.
+The client can still resolve DNS and access HTTPS websites.
+Non-web TCP/22 is no longer broadly successful from the client perspective.
+
+===== Rollback Note =====
+If required, #Default_Network_Policy can be re-enabled because it was disabled rather than deleted.
+
+===== Security Note =====
+No screenshots with browser session parameters, serial numbers, email addresses or passwords were committed.
+
+===== Git Status =====
+ M README.md
+?? docs/portfolio/
+?? docs/security/m4-firewall-rule-optimization.md
+?? evidence/cli-outputs/m4-01-rulebase-analysis-start.txt
+?? evidence/cli-outputs/m4-02-portfolio-use-cases.txt
+?? evidence/cli-outputs/m4-03-github-neutralization-check.txt
+?? evidence/cli-outputs/m4-04-rulebase-allow-block-validation.txt
+

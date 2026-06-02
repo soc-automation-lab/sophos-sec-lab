@@ -5,7 +5,7 @@ This repository documents a local IT security lab for firewall and network secur
 ## Goal
 
 The goal of this project is to build a local Sophos Firewall Home Edition lab on Microsoft Hyper-V.
-The lab is designed for practical preparation for an IT Security Administrator role with a focus on firewall and network operations.
+The lab is designed for practical firewall and network security operations in a controlled local environment.
 
 Main learning areas:
 
@@ -50,7 +50,7 @@ Planned networks:
 | M4 | Firewall rulebase and segmentation |
 | M5 | VPN and remote access fundamentals |
 | M6 | Troubleshooting and operations |
-| M7 | Portfolio and interview package |
+| M7 | Public documentation and repository hardening |
 
 ## Security Boundaries
 
@@ -72,3 +72,5 @@ runbooks/   Step-by-step operational procedures
 scripts/    PowerShell scripts for repeatable lab setup
 evidence/   Sanitized command output and lab evidence
 .local/     Local installers, ISOs and VHDs excluded from Git
+
+

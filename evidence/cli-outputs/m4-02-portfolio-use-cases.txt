@@ -1,0 +1,23 @@
+﻿Sophos Security Lab - M4.2 Technical Use Case Mapping
+Timestamp: 2026-06-02 19:01:27
+
+===== Created Neutral Technical Documents =====
+docs/portfolio/use-cases.md
+docs/portfolio/technical-scope-mapping.md
+docs/portfolio/technical-summary.md
+
+===== Purpose =====
+The documents map the technical lab work to general firewall and network operations capabilities.
+The repository-facing wording is neutral and focused on technical implementation, validation and documentation.
+
+===== Key Message =====
+The project demonstrates practical Sophos firewall operations, TCP/IP troubleshooting, DNS, HTTP/S, NAT, logging, documentation and future VLAN/VPN/cloud-security extension points.
+
+===== Git Status =====
+ M README.md
+?? docs/portfolio/
+?? docs/security/m4-firewall-rule-optimization.md
+?? evidence/cli-outputs/m4-01-rulebase-analysis-start.txt
+?? evidence/cli-outputs/m4-02-portfolio-use-cases.txt
+?? evidence/cli-outputs/m4-03-github-neutralization-check.txt
+

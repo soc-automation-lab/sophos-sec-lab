@@ -1,0 +1,18 @@
+﻿Sophos Security Lab - M4.6 Final Sanitization and Git Status
+Timestamp: 2026-06-02 21:25:08
+
+===== Sanitization Check =====
+Checked file count: 34
+No configured public-context wording matches were found.
+
+===== Git Status Before Commit =====
+ M README.md
+ M docs/operations/change-log.md
+ M runbooks/runbook-firewall-rule-change.md
+?? docs/portfolio/
+?? docs/security/m4-firewall-rule-optimization.md
+?? evidence/cli-outputs/m4-01-rulebase-analysis-start.txt
+?? evidence/cli-outputs/m4-02-portfolio-use-cases.txt
+?? evidence/cli-outputs/m4-03-github-neutralization-check.txt
+?? evidence/cli-outputs/m4-04-rulebase-allow-block-validation.txt
+

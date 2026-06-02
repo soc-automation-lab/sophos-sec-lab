@@ -99,3 +99,41 @@ Do not remove the Sophos lab switches or WinNAT unless rolling back Meilenstein 
 
 If rollback is required, shut down and remove only vm-win-client-01 and its local .local/hyperv working directory.
 Do not remove Sophos Firewall VM, Sophos switches or WinNAT unless rolling back earlier milestones.
+
+## CHG-M4-RULEBASE-OPTIMIZATION
+
+| Field | Value |
+|---|---|
+| Change type | Firewall rulebase optimization |
+| Scope | LAN-to-WAN web allow rule, linked NAT rule, broad default rule deactivation |
+| Risk | Medium |
+| Result | Successful |
+
+## Implemented Changes
+
+- Created a dedicated firewall rule named LAN_to_WAN_Web.
+- Allowed only HTTP and HTTPS from LAN to WAN through the dedicated web rule.
+- Enabled firewall traffic logging on LAN_to_WAN_Web.
+- Created and validated the linked NAT rule NAT_LAN_to_WAN_Web using MASQ.
+- Placed LAN_to_WAN_Web above the broad default LAN-to-WAN policy.
+- Disabled #Default_Network_Policy after successful validation.
+- Kept #Default_Network_Policy disabled rather than deleted to preserve rollback capability.
+
+## Validation
+
+- HTTPS to example.com remained successful after disabling #Default_Network_Policy.
+- Sophos logs showed allowed TCP/443 traffic through LAN_to_WAN_Web.
+- Sophos logs showed NAT_LAN_to_WAN_Web for allowed web traffic.
+- TCP/22 to 1.1.1.1 was no longer successful from the client perspective after disabling the broad rule.
+- DNS resolution for example.com remained successful.
+
+## Correction Note
+
+A previous TCP/22 test was still shown as allowed by #Default_Network_Policy.
+This confirmed that the broad rule was still active at that time.
+The rule was then disabled and the tests were repeated.
+
+## Rollback Concept
+
+If approved troubleshooting requires temporary broad LAN-to-WAN access, #Default_Network_Policy can be re-enabled.
+The rule was intentionally disabled instead of deleted.

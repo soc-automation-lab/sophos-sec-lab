@@ -1,0 +1,21 @@
+﻿Sophos Security Lab - M4.1 Rulebase Analysis Start
+Timestamp: 2026-06-01 22:09:18
+
+===== Current Known Rulebase State =====
+Initial rule #Default_Network_Policy currently allows LAN to WAN with any service.
+Firewall traffic logging was enabled during M3.
+The rule was confirmed by Sophos log validation for HTTPS traffic from 10.10.10.100 to 104.20.23.154 TCP/443.
+
+===== M4 Goal =====
+Replace the broad any-service LAN-to-WAN baseline with more specific documented rules.
+Validate both allowed and blocked traffic in Sophos logs.
+
+===== Planned Next Manual Sophos GUI Check =====
+Open Rules and Policies > Firewall rules.
+Confirm the current #Default_Network_Policy settings.
+Open NAT rules and confirm #NAT_Default_Network_Policy.
+Do not change rules yet.
+
+===== Git Status =====
+?? docs/security/m4-firewall-rule-optimization.md
+
