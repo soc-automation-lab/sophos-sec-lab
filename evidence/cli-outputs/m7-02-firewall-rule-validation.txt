@@ -1,0 +1,26 @@
+﻿Sophos Security Lab - M7.2 Firewall Rule Validation
+
+Created documents:
+- docs/security/use-case-firewall-rule-validation.md
+- runbooks/runbook-validate-firewall-rule-behavior.md
+
+Observed lab result summary:
+- Client IP: 10.10.10.100
+- Client gateway: 10.10.10.1
+- HTTPS TCP/443 to example.com: Successful
+- HTTP TCP/80 to example.com: Successful
+- Non-web TCP/22 to 1.1.1.1: Not successful
+- Sophos firewall log validation: HTTP/HTTPS traffic matched LAN_to_WAN_Web
+- Sophos NAT validation: HTTP/HTTPS traffic matched NAT_LAN_to_WAN_Web
+
+Operational interpretation:
+The validation confirms that HTTP and HTTPS traffic are allowed through the intended firewall and NAT rules.
+The failed TCP/22 comparison test confirms that unrelated non-web traffic is not broadly permitted by the web rule.
+
+Git status at evidence creation:
+?? docs/security/use-case-client-internet-troubleshooting.md
+?? docs/security/use-case-firewall-rule-validation.md
+?? evidence/cli-outputs/m7-01-client-internet-troubleshooting.txt
+?? evidence/cli-outputs/m7-02-firewall-rule-validation.txt
+?? runbooks/runbook-troubleshoot-client-internet-access.md
+?? runbooks/runbook-validate-firewall-rule-behavior.md

@@ -1,0 +1,32 @@
+﻿Sophos Security Lab - M7.3 Firewall Health Check Review
+
+Created documents:
+- docs/security/use-case-firewall-health-check-review.md
+- runbooks/runbook-review-sophos-health-check.md
+
+Observed Health Check summary:
+- Total checks: 31
+- Compliant checks: 9
+- Non-compliant checks: 22
+- High severity findings: 11 of 17
+- Medium severity findings: 9 of 11
+- Low severity findings: 2 of 3
+
+Operational interpretation:
+The Health Check state was reviewed as a risk-based configuration assessment.
+Several findings depend on Sophos Central, Endpoint, MDR, NDR or XDR components and were documented as scope-dependent lab limitations.
+Directly actionable firewall baseline items should be prioritized separately from license- or integration-dependent findings.
+
+Security note:
+GUI screenshots with serial numbers, account identifiers or browser session parameters were not stored in the public repository evidence.
+
+Git status at evidence creation:
+?? docs/security/use-case-client-internet-troubleshooting.md
+?? docs/security/use-case-firewall-health-check-review.md
+?? docs/security/use-case-firewall-rule-validation.md
+?? evidence/cli-outputs/m7-01-client-internet-troubleshooting.txt
+?? evidence/cli-outputs/m7-02-firewall-rule-validation.txt
+?? evidence/cli-outputs/m7-03-firewall-health-check-review.txt
+?? runbooks/runbook-review-sophos-health-check.md
+?? runbooks/runbook-troubleshoot-client-internet-access.md
+?? runbooks/runbook-validate-firewall-rule-behavior.md

@@ -1,0 +1,25 @@
+﻿Sophos Security Lab - M7.1 Client Internet Access Troubleshooting
+
+Created documents:
+- docs/security/use-case-client-internet-troubleshooting.md
+- runbooks/runbook-troubleshoot-client-internet-access.md
+
+Observed lab result summary:
+- Client IP: 10.10.10.100
+- Default gateway: 10.10.10.1
+- DNS resolution for example.com: Successful
+- Sophos WebAdmin TCP/4444: Successful
+- HTTPS TCP/443 to example.com: Successful
+- HTTPS content retrieval from example.com: HTTP 200 OK
+- Non-web TCP/22 to 1.1.1.1: Not successful
+- Sophos firewall log validation: HTTPS traffic matched LAN_to_WAN_Web and NAT_LAN_to_WAN_Web
+- Sophos route lookup for 1.1.1.1: PortB via 172.30.10.1
+
+Operational interpretation:
+The client path was validated from endpoint, firewall log and firewall diagnostic perspectives.
+The result proves web access through the intended Sophos firewall and NAT policy while non-web TCP/22 is not broadly allowed.
+
+Git status at evidence creation:
+?? docs/security/use-case-client-internet-troubleshooting.md
+?? evidence/cli-outputs/m7-01-client-internet-troubleshooting.txt
+?? runbooks/runbook-troubleshoot-client-internet-access.md
