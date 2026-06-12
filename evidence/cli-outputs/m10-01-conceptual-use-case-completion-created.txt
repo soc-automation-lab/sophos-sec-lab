@@ -1,0 +1,35 @@
+﻿Sophos Security Lab - M10.1 Conceptual Use Case Completion
+
+Created documents:
+- docs/security/use-case-dmz-web-server-publishing-concept.md
+- docs/security/use-case-lan-dmz-segmentation-concept.md
+- docs/security/use-case-guest-network-isolation-concept.md
+- docs/security/use-case-internal-dns-resolver-architecture.md
+- docs/security/use-case-syslog-siem-integration-concept.md
+- docs/security/use-case-vpn-branch-connectivity-concept.md
+- docs/planning/use-case-completion-matrix.md
+- runbooks/runbook-future-firewall-expansion.md
+
+Conceptually and operationally documented use cases:
+- UC-08 DMZ web server publishing
+- UC-09 LAN to DMZ segmentation
+- UC-10 Guest network isolation concept
+- UC-11 DNS architecture with internal resolver
+- UC-12 Syslog and SIEM integration concept
+- UC-14 VPN and branch connectivity concept
+
+Project completion state:
+- Total documented use cases: 15
+- Practical / operational: 9
+- Conceptual / operational: 6
+
+Git status after all M10 concept documents were created:
+?? docs/planning/use-case-completion-matrix.md
+?? docs/security/use-case-dmz-web-server-publishing-concept.md
+?? docs/security/use-case-guest-network-isolation-concept.md
+?? docs/security/use-case-internal-dns-resolver-architecture.md
+?? docs/security/use-case-lan-dmz-segmentation-concept.md
+?? docs/security/use-case-syslog-siem-integration-concept.md
+?? docs/security/use-case-vpn-branch-connectivity-concept.md
+?? evidence/cli-outputs/m10-01-conceptual-use-case-completion-created.txt
+?? runbooks/runbook-future-firewall-expansion.md
