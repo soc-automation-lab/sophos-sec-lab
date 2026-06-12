@@ -1,0 +1,28 @@
+﻿Sophos Security Lab - M9.1 Operational Use Case Expansion
+
+Created documents:
+- docs/security/use-case-network-policy-inventory.md
+- docs/security/use-case-appliance-access-hardening-review.md
+- docs/security/use-case-dhcp-dns-troubleshooting.md
+- docs/security/use-case-nat-rule-review-cleanup.md
+- docs/security/use-case-backup-firmware-rollback.md
+- docs/security/use-case-cloud-application-visibility.md
+- runbooks/runbook-operational-firewall-use-case-review.md
+
+Implemented or operationally documented use cases:
+- UC-04 Network and policy inventory
+- UC-05 Appliance access hardening review
+- UC-06 DHCP and DNS troubleshooting
+- UC-07 NAT rule review and cleanup
+- UC-13 Backup, firmware and rollback procedure
+- UC-15 Microsoft 365 and cloud application visibility
+
+Git status at evidence creation:
+?? docs/security/use-case-appliance-access-hardening-review.md
+?? docs/security/use-case-backup-firmware-rollback.md
+?? docs/security/use-case-cloud-application-visibility.md
+?? docs/security/use-case-dhcp-dns-troubleshooting.md
+?? docs/security/use-case-nat-rule-review-cleanup.md
+?? docs/security/use-case-network-policy-inventory.md
+?? evidence/cli-outputs/m9-01-operational-use-case-expansion-created.txt
+?? runbooks/runbook-operational-firewall-use-case-review.md
