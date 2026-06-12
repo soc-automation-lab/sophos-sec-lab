@@ -1,0 +1,27 @@
+﻿Sophos Security Lab - M8.4 Management, Profile and Central Inventory
+
+Created document:
+- docs/planning/sophos-management-profiles-inventory.md
+
+Observed state:
+- Multiple firewall security modules are available in evaluation state
+- DNS Protection is not subscribed
+- NDR Essentials is not subscribed
+- SNMP agent is disabled
+- SNMPv3 and SNMPv1/v2c entries are not configured
+- Default schedule, access time, quota, decryption, IPsec and appliance access profiles are available
+- Sophos Central registration is not configured
+- Security Heartbeat and Synchronized Application Control are not enabled
+
+Operational interpretation:
+The observed areas are important for firewall operations, monitoring readiness, role-based administration, VPN design and Central integration planning.
+
+Current scope decision:
+These features are documented as inventory and planning input. No SNMP or Sophos Central integration is enabled in the current lab state.
+
+Git status at evidence creation:
+?? docs/planning/
+?? evidence/cli-outputs/m8-01-use-case-backlog-created.txt
+?? evidence/cli-outputs/m8-02-routing-inventory-created.txt
+?? evidence/cli-outputs/m8-03-vpn-inventory-created.txt
+?? evidence/cli-outputs/m8-04-management-profiles-inventory-created.txt

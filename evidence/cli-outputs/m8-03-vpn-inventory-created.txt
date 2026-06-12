@@ -1,0 +1,24 @@
+﻿Sophos Security Lab - M8.3 VPN Inventory
+
+Created document:
+- docs/planning/sophos-vpn-inventory.md
+
+Observed VPN state:
+- Remote access SSL-VPN is not configured
+- Remote access IPsec is not enabled
+- Site-to-site IPsec has no configured connections
+- Site-to-site SSL-VPN has no configured server or client entries
+- Amazon VPC VPN is not configured
+- VPN logs and client download areas are available
+
+Operational interpretation:
+VPN is highly relevant for remote access and branch connectivity scenarios, but practical implementation requires users/groups, authentication settings, firewall rules, routing and a realistic peer or client setup.
+
+Current scope decision:
+VPN is documented as a planned and conceptually relevant feature. No VPN tunnel is enabled in the current lab state.
+
+Git status at evidence creation:
+?? docs/planning/
+?? evidence/cli-outputs/m8-01-use-case-backlog-created.txt
+?? evidence/cli-outputs/m8-02-routing-inventory-created.txt
+?? evidence/cli-outputs/m8-03-vpn-inventory-created.txt

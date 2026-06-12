@@ -1,0 +1,28 @@
+﻿Sophos Security Lab - M8.5 Administrative Access and Observability Inventory
+
+Created document:
+- docs/planning/sophos-administrative-access-observability-inventory.md
+
+Observed state:
+- Appliance access is configured per zone
+- WAN-facing local services appear to be disabled in the observed state
+- LAN and WiFi zones allow multiple local firewall services
+- API access is disabled
+- No allowed API host list is configured
+- Notification settings are configured, but private addresses must not be published
+- NetFlow is not configured
+- Message customization areas are available
+
+Operational interpretation:
+Administrative access must be reviewed separately from firewall rules because it controls access to services running on the firewall itself.
+
+Current scope decision:
+This inventory is used as planning input for a later appliance access hardening use case.
+
+Git status at evidence creation:
+?? docs/planning/
+?? evidence/cli-outputs/m8-01-use-case-backlog-created.txt
+?? evidence/cli-outputs/m8-02-routing-inventory-created.txt
+?? evidence/cli-outputs/m8-03-vpn-inventory-created.txt
+?? evidence/cli-outputs/m8-04-management-profiles-inventory-created.txt
+?? evidence/cli-outputs/m8-05-administrative-access-observability-inventory-created.txt

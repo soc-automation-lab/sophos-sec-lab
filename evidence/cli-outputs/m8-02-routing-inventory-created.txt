@@ -1,0 +1,23 @@
+﻿Sophos Security Lab - M8.2 Routing Inventory
+
+Created document:
+- docs/planning/sophos-routing-inventory.md
+
+Observed routing state:
+- One active IPv4 gateway: GW_WAN_WINNAT
+- Gateway IP: 172.30.10.1
+- Gateway interface: PortB
+- No SD-WAN routes configured
+- No SD-WAN profiles configured
+- No static IPv4 or IPv6 routes configured
+- BGP is not configured
+- OSPF and OSPFv3 are not configured
+- Upstream proxy is disabled
+
+Operational interpretation:
+The lab uses a simple directly connected LAN/WAN routing model with one WAN gateway through Windows Host WinNAT.
+
+Git status at evidence creation:
+?? docs/planning/
+?? evidence/cli-outputs/m8-01-use-case-backlog-created.txt
+?? evidence/cli-outputs/m8-02-routing-inventory-created.txt

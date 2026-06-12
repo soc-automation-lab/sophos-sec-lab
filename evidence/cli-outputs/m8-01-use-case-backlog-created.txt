@@ -1,0 +1,16 @@
+﻿Sophos Security Lab - M8.1 Use Case Backlog
+
+Created document:
+- docs/planning/firewall-use-case-backlog.md
+
+Purpose:
+The backlog collects realistic Sophos Firewall use cases for iterative implementation.
+
+Planning approach:
+- Implement practical and evidence-driven use cases first.
+- Add additional VMs only when they enable realistic scenarios.
+- Keep public documentation free of screenshots with private or session-specific data.
+
+Git status at evidence creation:
+?? docs/planning/
+?? evidence/cli-outputs/m8-01-use-case-backlog-created.txt

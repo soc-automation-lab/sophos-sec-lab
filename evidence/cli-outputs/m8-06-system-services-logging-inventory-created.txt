@@ -1,0 +1,29 @@
+﻿Sophos Security Lab - M8.6 System Services and Logging Inventory
+
+Created document:
+- docs/planning/sophos-system-services-logging-inventory.md
+
+Observed state:
+- Multiple core system services are running
+- Antispam is stopped
+- WAF is not active because no web server is configured
+- DHCP server is running
+- DHCPv6 and Router Advertisement are not configured
+- Traffic shaping profiles are available but not assigned as an active use case
+- No syslog server is configured
+- Multiple local logging categories are enabled
+
+Operational interpretation:
+System services, local logging and centralized log forwarding must be reviewed separately because they support different operational tasks.
+
+Current scope decision:
+This inventory is used as planning input for later logging, SIEM, NetFlow and service review use cases.
+
+Git status at evidence creation:
+?? docs/planning/
+?? evidence/cli-outputs/m8-01-use-case-backlog-created.txt
+?? evidence/cli-outputs/m8-02-routing-inventory-created.txt
+?? evidence/cli-outputs/m8-03-vpn-inventory-created.txt
+?? evidence/cli-outputs/m8-04-management-profiles-inventory-created.txt
+?? evidence/cli-outputs/m8-05-administrative-access-observability-inventory-created.txt
+?? evidence/cli-outputs/m8-06-system-services-logging-inventory-created.txt
